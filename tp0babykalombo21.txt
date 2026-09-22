@@ -1,0 +1,181 @@
+/*
+ * TP0 EXERCICE 1
+ * groupe 1 BDML
+ * nom du programme: asking question
+ * 22/09/2026
+*/
+package babykalomboj1;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author babyk
+ */
+public class BabyKALOMBOj1 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        System.out.println("Tu es un prince");
+        System.out.println (" et tu le sais ");
+      String prenom;
+Scanner sc = new Scanner(System.in);
+
+// 1. On affiche la question
+System.out.println("Mais cependant je ne connais votre prenom, quel est votre prenom?");
+
+// 2. On attend que l'utilisateur tape son prénom et on stocke le résultat
+prenom = sc.nextLine();
+
+// 3. On affiche le message personnalisé avec la concaténation
+System.out.println("Bonjour " + prenom + ", ravi de te rencontrer !");
+
+//***************** PARTI2 ADDITION D'ENTIER**************************************************************
+
+
+
+    }
+    
+}
+
+
+
+
+
+
+
+/*
+ * TP0 EXERCICE 1
+ * groupe 1 BDML
+ * nom du programme: addition d'entier
+ * 22/09/2026
+*/
+//***************** PARTI2 ADDITION D'ENTIER***********************************
+package babykalomboj2;
+
+import java.util.Scanner; // N'oublie pas d'importer le Scanner
+
+/**
+ *
+ * @author babyk
+ */
+public class BabyKALOMBOj2 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        // Declaration des variables
+        int nb; // nombre d'entiers a additionner
+        int result; // resultat
+        int ind; // indice
+        
+        // Initialisation du Scanner pour lire l'entrée de l'utilisateur
+        Scanner sc = new Scanner(System.in);
+        System.out.println("\n Entrer le nombre:");
+        nb = sc.nextInt(); // On demande a sc de donner le prochain entier
+        
+        result = 0;
+        
+        // Addition des nb premiers entiers
+        ind = 1;
+        while (ind <= nb) {
+            result = result + ind;
+            ind++; // Indispensable : fait avancer l'indice pour ne pas bloquer le programme
+        }
+        
+        // Affichage du resultat
+        System.out.println();
+        System.out.println("La somme des " + nb + " entiers est: " + result);
+    }
+    
+}
+
+
+
+
+
+
+
+
+/*
+ * TP0 EXERCICE 3 - Calculette
+ * Auteur: Baby Kalombo
+ * groupe 1 BDML
+ * nom du programme: Calculator
+ * 22/09/2026
+*/
+package calculator;
+
+import java.util.Scanner;
+
+public class Calculator {
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        
+        // EXERCICE 2 : Menu
+        System.out.println("Please enter the operator:");
+        System.out.println("1) add");
+        System.out.println("2) substract");
+        System.out.println("3) multiply");
+        System.out.println("4) divide");
+        System.out.println("5) modulo");
+        
+        // EXERCICE 3 : Saisie de l'opérateur
+        int operateur = sc.nextInt();
+        
+        // EXERCICES 7 et 8 : Vérification anticipée
+        if (operateur < 1 || operateur > 5) {
+            System.out.println("Erreur : Opérateur non reconnu.");
+            System.exit(0);
+        }
+        
+        // EXERCICE 4 : Saisie de la première valeur
+        System.out.println("Please enter the first number:");
+        int operande1 = sc.nextInt();
+        
+        // EXERCICE 5 : Saisie de la seconde valeur
+        System.out.println("Please enter the second number:");
+        int operande2 = sc.nextInt();
+        
+        // EXERCICE 6 : Calcul et résultat
+        System.out.print("The result is: ");
+        switch (operateur) {
+            case 1:
+                System.out.println(operande1 + operande2);
+                break;
+            case 2:
+                System.out.println(operande1 - operande2);
+                break;
+            case 3:
+                System.out.println(operande1 * operande2);
+                break;
+            case 4:
+                if (operande2 != 0) {
+                    System.out.println(operande1 / operande2);
+                } else {
+                    System.out.println("Division par zéro impossible.");
+                }
+                break;
+            case 5:
+                if (operande2 != 0) {
+                    System.out.println(operande1 % operande2);
+                } else {
+                    System.out.println("Modulo par zéro impossible.");
+                }
+                break;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
